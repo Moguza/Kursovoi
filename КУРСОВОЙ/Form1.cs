@@ -21,20 +21,20 @@ namespace КУРСОВОЙ
             InitializeComponent();
         }
 
-        DB1 db1 = new DB1(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB2 db2 = new DB2(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB3 db3 = new DB3(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB4 db4 = new DB4(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB5 db5 = new DB5(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB6 db6 = new DB6(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        DB7 db7 = new DB7(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB1 db1 = new DB1(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB2 db2 = new DB2(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB3 db3 = new DB3(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB4 db4 = new DB4(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB5 db5 = new DB5(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB6 db6 = new DB6(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
+        //DB7 db7 = new DB7(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
         
         private void Vyvod()
         {
             if (radioButton1.Checked == true)
             {
                 label1.Text = ("id_поставщика" + " | " + "ФИО" + " | " + "Почта");
-                var c = db1.Zapros(0);
+                var c = Program.db1.Zapros(0);
                 foreach (Поставщики pos in c)
                 {
                     listBox1.Items.Add(pos);
@@ -43,7 +43,7 @@ namespace КУРСОВОЙ
             if (radioButton2.Checked == true)
             {
                 label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
-                var c = db2.Zapros(0);
+                var c = Program.db2.Zapros(0);
                 foreach (Клиенты kl in c)
                 {
                     listBox1.Items.Add(kl);
@@ -52,7 +52,7 @@ namespace КУРСОВОЙ
             if (radioButton3.Checked == true)
             {
                 label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
-                var c = db3.Zapros(0);
+                var c = Program.db3.Zapros(0);
                 foreach (Товары tov in c)
                 {
                     listBox1.Items.Add(tov);
@@ -61,7 +61,7 @@ namespace КУРСОВОЙ
             if (radioButton4.Checked == true)
             {
                 label1.Text = ("id_Список_товаров_по_покупке" + " | " + "id_товара" + " | " + "id_покупки");
-                var c = db4.Zapros(0);
+                var c = Program.db4.Zapros(0);
                 foreach (Список_товаров_по_покупке SpTovPok in c)
                 {
                     listBox1.Items.Add(SpTovPok);
@@ -70,7 +70,7 @@ namespace КУРСОВОЙ
             if (radioButton5.Checked == true)
             {
                 label1.Text = ("id_Список_товаров_по_продаже" + " | " + "id_товара" + " | " + "id_продажи");
-                var c = db5.Zapros(0);
+                var c = Program.db5.Zapros(0);
                 foreach (Список_товаров_по_продаже SpTovProd in c)
                 {
                     listBox1.Items.Add(SpTovProd);
@@ -79,7 +79,7 @@ namespace КУРСОВОЙ
             if (radioButton6.Checked == true)
             {
                 label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи");
-                var c = db6.Zapros(0);
+                var c = Program.db6.Zapros(0);
                 foreach (Продажа prod in c)
                 {
                     listBox1.Items.Add(prod);
@@ -88,7 +88,7 @@ namespace КУРСОВОЙ
             if (radioButton7.Checked == true)
             {
                 label1.Text = ("id_покупки" + " | " + "id_поставщика" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_покупки");
-                var c = db7.Zapros(0);
+                var c = Program.db7.Zapros(0);
                 foreach (Покупка pok in c)
                 {
                     listBox1.Items.Add(pok);
@@ -185,56 +185,11 @@ namespace КУРСОВОЙ
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox1.Text);
-                db1.Delete(r);
+                Program.db1.Delete(r);
                 MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице поставщики");
                 textBox1.Text = "";
                 Vyvod();
             }
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked == true)
-            {
-                try
-                {
-                    if ((textBox2.Text == "") || (textBox3.Text == ""))
-                    {
-                        MessageBox.Show("Часть полей не заполнено");
-                        return;
-                    }
-                }
-                catch { }
-                listBox1.Items.Clear();
-                db1.ADD(textBox2.Text, textBox3.Text);
-                textBox2.Text = "";
-                textBox3.Text = "";
-                //Close();
-                MessageBox.Show("Новый поставщик добавлен успешно!");
-                Vyvod();
-            }
-        }
-        //private void button4_Click(object sender, EventArgs e)
-        //{
-        //    if (radioButton1.Checked == true)
-        //    {
-        //        try
-        //        {
-        //            if ((textBox2.Text == "") || (textBox3.Text == ""))
-        //            {
-        //                MessageBox.Show("Часть полей не заполнено");
-        //                return;
-        //            }
-        //        }
-        //        catch { }
-        //        listBox1.Items.Clear();
-        //        db1.ADD(textBox2.Text, textBox3.Text);
-        //        textBox2.Text = "";
-        //        textBox3.Text = "";
-        //        //Close();
-        //        MessageBox.Show("Новый поставщик добавлен успешно!");
-        //        Vyvod();
-        //    }
-        //}
     }
 }

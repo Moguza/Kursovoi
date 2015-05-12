@@ -45,11 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.кУРСОВОЙDataSet = new КУРСОВОЙ.КУРСОВОЙDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // кУРСОВОЙDataSet1BindingSource
@@ -202,29 +201,10 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // кУРСОВОЙDataSet
             // 
-            this.button4.Location = new System.Drawing.Point(238, 213);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(127, 372);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(127, 399);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.кУРСОВОЙDataSet.DataSetName = "КУРСОВОЙDataSet";
+            this.кУРСОВОЙDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form1
             // 
@@ -232,9 +212,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::КУРСОВОЙ.Properties.Resources.олт;
             this.ClientSize = new System.Drawing.Size(898, 466);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -253,6 +230,7 @@
             this.Text = "Работа с таблицами";
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,9 +254,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private КУРСОВОЙDataSet кУРСОВОЙDataSet;
     }
 }
 
