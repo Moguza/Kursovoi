@@ -28,8 +28,8 @@ namespace КУРСОВОЙ
         //DB5 db5 = new DB5(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
         //DB6 db6 = new DB6(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
         //DB7 db7 = new DB7(@"Data Source=.\SQLEXPRESS;AttachDbFilename=c:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\КУРСОВОЙ.mdf;Integrated Security=True;User Instance=True");
-        
-        private void Vyvod()
+
+        public  void Vyvod()
         {
             if (radioButton1.Checked == true)
             {
@@ -99,8 +99,11 @@ namespace КУРСОВОЙ
         {
             if (radioButton1.Checked == true)
             {
-                listBox1.Items.Clear();
-                Vyvod();
+                Список_поставщиков sp = new Список_поставщиков();
+                sp.Show();
+                Close();
+                //listBox1.Items.Clear();
+                //Vyvod();
             }
             if (radioButton2.Checked == true)
             {
@@ -137,7 +140,7 @@ namespace КУРСОВОЙ
         private void button2_Click(object sender, EventArgs e)
         {
             Добавление_редактирование f2 = new Добавление_редактирование();
-         //   f2.typ = 0;
+            //   f2.typ = 0;
             if (radioButton1.Checked == true)
             {
                 f2.typ = 0;

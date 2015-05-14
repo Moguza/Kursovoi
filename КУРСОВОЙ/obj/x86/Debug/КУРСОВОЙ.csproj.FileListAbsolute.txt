@@ -10,3 +10,7 @@ C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУ�
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.exe
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.pdb
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Добавление_редактирование.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Меню.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Список_клиентов.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Список_поставщиков.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Список_товаров.resources

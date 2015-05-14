@@ -87,11 +87,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>КУРСОВОЙDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Меню.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Меню.Designer.cs">
+      <DependentUpon>Меню.cs</DependentUpon>
+    </Compile>
     <Compile Include="Покупка.cs" />
     <Compile Include="Поставщики.cs" />
     <Compile Include="Продажа.cs" />
+    <Compile Include="Список клиентов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список клиентов.Designer.cs">
+      <DependentUpon>Список клиентов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список поставщиков.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список поставщиков.Designer.cs">
+      <DependentUpon>Список поставщиков.cs</DependentUpon>
+    </Compile>
     <Compile Include="Список товаров по покупке.cs" />
     <Compile Include="Список товаров по продаже.cs" />
+    <Compile Include="Список товаров.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список товаров.Designer.cs">
+      <DependentUpon>Список товаров.cs</DependentUpon>
+    </Compile>
     <Compile Include="Товары.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -108,6 +132,18 @@
     </Compile>
     <EmbeddedResource Include="Добавление_редактирование.resx">
       <DependentUpon>Добавление_редактирование.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Меню.resx">
+      <DependentUpon>Меню.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список клиентов.resx">
+      <DependentUpon>Список клиентов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список поставщиков.resx">
+      <DependentUpon>Список поставщиков.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список товаров.resx">
+      <DependentUpon>Список товаров.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

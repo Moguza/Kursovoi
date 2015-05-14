@@ -45,10 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.кУРСОВОЙDataSet = new КУРСОВОЙ.КУРСОВОЙDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // кУРСОВОЙDataSet1BindingSource
@@ -201,11 +199,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // кУРСОВОЙDataSet
-            // 
-            this.кУРСОВОЙDataSet.DataSetName = "КУРСОВОЙDataSet";
-            this.кУРСОВОЙDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,7 +223,6 @@
             this.Text = "Работа с таблицами";
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +246,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private КУРСОВОЙDataSet кУРСОВОЙDataSet;
     }
 }
 
