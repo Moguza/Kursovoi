@@ -15,28 +15,6 @@ namespace КУРСОВОЙ
         {
             InitializeComponent();
         }
-        public int a;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if ((radioButton1.Checked == false) && (radioButton2.Checked == false) && (radioButton3.Checked == false) && (radioButton4.Checked == false))
-            //   {
-            //       MessageBox.Show("Ошибка! Выберите тип обоев");
-            //   }
-            if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
-            {
-                MessageBox.Show("Ошибка! Вы не задали размеры комнаты");
-            }
-            //if (comboBox1.Text == "")
-            //{
-            //    MessageBox.Show("Ошибка! Вы не выбрали тип плитки");
-            //}
-            if ((textBox1.Text != "") && (textBox2.Text != "") && ((textBox3.Text != "")))
-            {
-                Form1 f1 = new Form1();
-                f1.ShowDialog();
-            }
-            a = Convert.ToInt32(textBox1.Text);
-        }
 
         private void Создать_заказ_обои_Load(object sender, EventArgs e)
         {
@@ -47,20 +25,62 @@ namespace КУРСОВОЙ
                 listBox1.Items.Add(tov);
             }
         }
+        public double a; //длина
+        public double b; // ширина
+        public double c; //высота
+        public double k; // число рулонов
+        public double dv_a;//длина  двери
+        public double dv_b;//ширина двери
+        public double dv_k;// число дверей
+        public double ok_a;//длина окна
+        public double ok_b;//ширина окна
+        public int ok_k;// число окон
 
-        private void listBox1_MouseClick(object sender, MouseEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Создать_заказ_обои_Load_1(object sender, EventArgs e)
-        {
-            label6.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
-            var c = Program.db2.Zapros(0);
-            foreach (Товары tov in c)
+            try
             {
-                listBox1.Items.Add(tov);
+                a = Convert.ToDouble(textBox1.Text);
+                b = Convert.ToDouble(textBox2.Text);
+                c = Convert.ToDouble(textBox3.Text);
+                dv_a = Convert.ToDouble(textBox4.Text);
+                dv_b = Convert.ToDouble(textBox5.Text);
+                dv_k = Convert.ToInt32(comboBox1.Text);
+                ok_a = Convert.ToDouble(textBox6.Text);
+                ok_b = Convert.ToDouble(textBox7.Text);
+                ok_k = Convert.ToInt32(comboBox2.Text);
+
+                if (radioButton5.Checked == true)
+                {
+                    if (radioButton7.Checked == true)
+                    {
+                        k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (53 * 1005);
+                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
+                    }
+                    if (radioButton8.Checked == true)
+                    {
+                        k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (106 * 1005);
+                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
+                    }
+                }
+                if (radioButton6.Checked == true)
+                {
+                    if (radioButton7.Checked == true)
+                    {
+                        k = (a * b) / (53 * 1005);
+                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
+                    }
+                    if (radioButton8.Checked == true)
+                    {
+                        k = (a * b) / (53 * 1005);
+                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
+                    }
+                }
             }
+            catch
+            { MessageBox.Show("Вы ввели не все параметры"); }
         }
+
+        
     }
 }
