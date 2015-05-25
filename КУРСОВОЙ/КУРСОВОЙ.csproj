@@ -82,40 +82,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>КУРСОВОЙDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="КУРСОВОЙDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>КУРСОВОЙDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Меню.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Меню.Designer.cs">
       <DependentUpon>Меню.cs</DependentUpon>
     </Compile>
-    <Compile Include="Покупка.cs" />
-    <Compile Include="Поставщики.cs" />
     <Compile Include="Продажа.cs" />
-    <Compile Include="Список клиентов.cs">
+    <Compile Include="Создать_заказ_обои.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Список клиентов.Designer.cs">
-      <DependentUpon>Список клиентов.cs</DependentUpon>
+    <Compile Include="Создать_заказ_обои.Designer.cs">
+      <DependentUpon>Создать_заказ_обои.cs</DependentUpon>
     </Compile>
-    <Compile Include="Список поставщиков.cs">
+    <Compile Include="Создать_заказ_плитка_на_пол.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Список поставщиков.Designer.cs">
-      <DependentUpon>Список поставщиков.cs</DependentUpon>
+    <Compile Include="Создать_заказ_плитка_на_пол.Designer.cs">
+      <DependentUpon>Создать_заказ_плитка_на_пол.cs</DependentUpon>
     </Compile>
-    <Compile Include="Список товаров по покупке.cs" />
-    <Compile Include="Список товаров по продаже.cs" />
-    <Compile Include="Список товаров.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Список товаров.Designer.cs">
-      <DependentUpon>Список товаров.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Проданные товары.cs" />
     <Compile Include="Товары.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -136,14 +122,11 @@
     <EmbeddedResource Include="Меню.resx">
       <DependentUpon>Меню.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Список клиентов.resx">
-      <DependentUpon>Список клиентов.cs</DependentUpon>
+    <EmbeddedResource Include="Создать_заказ_обои.resx">
+      <DependentUpon>Создать_заказ_обои.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Список поставщиков.resx">
-      <DependentUpon>Список поставщиков.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Список товаров.resx">
-      <DependentUpon>Список товаров.cs</DependentUpon>
+    <EmbeddedResource Include="Создать_заказ_плитка_на_пол.resx">
+      <DependentUpon>Создать_заказ_плитка_на_пол.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -165,17 +148,6 @@
     </None>
     <None Include="КУРСОВОЙDataSet.xss">
       <DependentUpon>КУРСОВОЙDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="КУРСОВОЙDataSet1.xsc">
-      <DependentUpon>КУРСОВОЙDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="КУРСОВОЙDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>КУРСОВОЙDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="КУРСОВОЙDataSet1.xss">
-      <DependentUpon>КУРСОВОЙDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

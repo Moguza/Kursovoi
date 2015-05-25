@@ -26,7 +26,7 @@ namespace КУРСОВОЙ
         {
             get;
             set;
-        } 
+        }
         [Column]
         public int Количество
         {
@@ -51,15 +51,15 @@ namespace КУРСОВОЙ
             get;
             set;
         }
-       
+
         public override string ToString()
         {
             return id_продажи + " | " + id_клиента + " | " + Количество + " | " + Цена + " | " + Стоимость + " | " + Дата_продажи;
         }
     }
-    public class DB6 : DataContext
+    public class DB4 : DataContext
     {
-        public DB6(string cs)
+        public DB4(string cs)
             : base(cs)
         {
         }

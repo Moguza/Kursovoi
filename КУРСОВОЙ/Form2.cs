@@ -9,32 +9,32 @@ using System.Windows.Forms;
 
 namespace КУРСОВОЙ
 {
-    public partial class Меню : Form
+    public partial class Form2 : Form
     {
-        public Меню()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void обоиНаСтеныToolStripMenuItem_Click_1(object sender, EventArgs e)
+       private void обоиНаСтеныToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Создать_заказ_обои sz_steny = new Создать_заказ_обои();
             sz_steny.ShowDialog();
         }
-
-        private void плиткаНаПолToolStripMenuItem_Click_1(object sender, EventArgs e)
+        
+        private void плиткаНаПолToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Создать_заказ_плитка_на_пол sz_pol = new Создать_заказ_плитка_на_пол();
             sz_pol.ShowDialog();
         }
 
-        private void изменитьБДToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void изменитьБДToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.ShowDialog();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Список клиентов")
             {
@@ -74,7 +74,10 @@ namespace КУРСОВОЙ
             }
         }
 
+        
 
+        
 
+        
     }
 }

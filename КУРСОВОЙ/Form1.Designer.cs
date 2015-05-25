@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.кУРСОВОЙDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.кУРСОВОЙDataSet1 = new КУРСОВОЙ.КУРСОВОЙDataSet1();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -46,18 +45,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // кУРСОВОЙDataSet1BindingSource
             // 
-            this.кУРСОВОЙDataSet1BindingSource.DataSource = this.кУРСОВОЙDataSet1;
             this.кУРСОВОЙDataSet1BindingSource.Position = 0;
             // 
             // кУРСОВОЙDataSet1
             // 
-            this.кУРСОВОЙDataSet1.DataSetName = "КУРСОВОЙDataSet1";
-            this.кУРСОВОЙDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // listBox1
             // 
@@ -222,7 +217,6 @@
             this.Name = "Form1";
             this.Text = "Работа с таблицами";
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +225,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource кУРСОВОЙDataSet1BindingSource;
-        private КУРСОВОЙDataSet1 кУРСОВОЙDataSet1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

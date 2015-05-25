@@ -45,9 +45,9 @@ namespace КУРСОВОЙ
             return id_товара + " | " + Наименование + " | " + Цена + " | " + Количество;
         }
     }
-    public class DB3 : DataContext
+    public class DB2 : DataContext
     {
-        public DB3(string cs)
+        public DB2(string cs)
             : base(cs)
         {
         }

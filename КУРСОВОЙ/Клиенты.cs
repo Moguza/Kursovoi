@@ -40,9 +40,9 @@ namespace КУРСОВОЙ
             return id_клиента + " | " + ФИО + " | " + Почта;
         }
     }
-    public class DB2 : DataContext
+    public class DB1 : DataContext
     {
-        public DB2(string cs)
+        public DB1(string cs)
             : base(cs)
         {
         }
