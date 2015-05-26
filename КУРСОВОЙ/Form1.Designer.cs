@@ -35,7 +35,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -54,7 +53,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -68,7 +69,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 21);
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(69, 17);
             this.radioButton1.TabIndex = 1;
@@ -80,7 +81,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(13, 44);
+            this.radioButton2.Location = new System.Drawing.Point(6, 42);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(64, 17);
             this.radioButton2.TabIndex = 2;
@@ -92,7 +93,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(13, 67);
+            this.radioButton3.Location = new System.Drawing.Point(6, 65);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(123, 17);
             this.radioButton3.TabIndex = 3;
@@ -104,7 +105,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(12, 90);
+            this.radioButton4.Location = new System.Drawing.Point(5, 88);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(122, 17);
             this.radioButton4.TabIndex = 4;
@@ -112,16 +113,6 @@
             this.radioButton4.Text = "Операция продажи";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(315, 455);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "ОК";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -180,7 +171,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(110, 387);
+            this.textBox6.Location = new System.Drawing.Point(164, 387);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(227, 28);
@@ -188,7 +179,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(110, 334);
+            this.textBox5.Location = new System.Drawing.Point(164, 334);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(227, 28);
@@ -196,7 +187,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(110, 281);
+            this.textBox4.Location = new System.Drawing.Point(164, 281);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(227, 28);
@@ -204,7 +195,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 231);
+            this.textBox3.Location = new System.Drawing.Point(164, 231);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(227, 28);
@@ -212,7 +203,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 188);
+            this.textBox2.Location = new System.Drawing.Point(164, 188);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 28);
@@ -220,7 +211,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(129, 137);
+            this.textBox7.Location = new System.Drawing.Point(164, 138);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(77, 28);
@@ -280,11 +271,24 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(135, 121);
+            this.label8.Location = new System.Drawing.Point(170, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Фамилия";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(138, 117);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ВЫБЕРИТЕ ТАБЛИЦУ";
             // 
             // Form1
             // 
@@ -292,6 +296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::КУРСОВОЙ.Properties.Resources.олт;
             this.ClientSize = new System.Drawing.Size(898, 522);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox6);
@@ -310,15 +315,12 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Работа с таблицами";
             ((System.ComponentModel.ISupportInitialize)(this.кУРСОВОЙDataSet1BindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +334,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
@@ -351,6 +352,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

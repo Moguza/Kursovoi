@@ -47,9 +47,9 @@ namespace КУРСОВОЙ
             }
             if (comboBox1.Text == "Список товаров")
             {
-                label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
+                label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Размер" + " | " + "Цена" + " | " + "Количество");
                 var c = Program.db2.Zapros(0);
-                foreach (Tovary tov in c)
+                foreach (Товары tov in c)
                 {
                     listBox1.Items.Add(tov);
                 }

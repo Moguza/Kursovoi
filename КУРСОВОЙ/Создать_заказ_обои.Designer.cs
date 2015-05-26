@@ -51,20 +51,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -101,17 +100,17 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(451, 107);
+            this.textBox3.Location = new System.Drawing.Point(117, 103);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(46, 28);
+            this.textBox3.Size = new System.Drawing.Size(65, 28);
             this.textBox3.TabIndex = 121;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightGray;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(353, 104);
+            this.label4.Location = new System.Drawing.Point(6, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 21);
             this.label4.TabIndex = 124;
@@ -142,9 +141,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightGray;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(352, 49);
+            this.label2.Location = new System.Drawing.Point(17, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 122;
@@ -164,9 +163,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(352, 75);
+            this.label3.Location = new System.Drawing.Point(5, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 21);
             this.label3.TabIndex = 123;
@@ -186,13 +185,14 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(451, 81);
+            this.textBox2.Location = new System.Drawing.Point(117, 65);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 28);
+            this.textBox2.Size = new System.Drawing.Size(65, 28);
             this.textBox2.TabIndex = 120;
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
@@ -284,9 +284,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(818, 372);
+            this.button1.Location = new System.Drawing.Point(786, 372);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 46);
+            this.button1.Size = new System.Drawing.Size(116, 57);
             this.button1.TabIndex = 125;
             this.button1.Text = "Далее";
             this.button1.UseVisualStyleBackColor = true;
@@ -295,73 +295,14 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(451, 49);
+            this.textBox1.Location = new System.Drawing.Point(117, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 28);
+            this.textBox1.Size = new System.Drawing.Size(65, 28);
             this.textBox1.TabIndex = 119;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Location = new System.Drawing.Point(239, 141);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(371, 103);
-            this.groupBox1.TabIndex = 129;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Обои";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.LightGray;
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(145, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(113, 69);
-            this.groupBox3.TabIndex = 98;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Назначение";
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.BackColor = System.Drawing.Color.LightGray;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton5.Location = new System.Drawing.Point(6, 19);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(83, 25);
-            this.radioButton5.TabIndex = 22;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "для стен";
-            this.radioButton5.UseVisualStyleBackColor = false;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.BackColor = System.Drawing.Color.LightGray;
-            this.radioButton6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton6.Location = new System.Drawing.Point(6, 42);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(107, 25);
-            this.radioButton6.TabIndex = 23;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "для потолка";
-            this.radioButton6.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(334, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 21);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "Укажите размеры комнаты";
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.textBox6);
@@ -395,21 +336,78 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(653, 249);
+            this.textBox8.Location = new System.Drawing.Point(786, 249);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(239, 103);
             this.textBox8.TabIndex = 126;
             // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton6.Location = new System.Drawing.Point(6, 50);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(107, 25);
+            this.radioButton6.TabIndex = 23;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "для потолка";
+            this.radioButton6.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton5.Location = new System.Drawing.Point(6, 27);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(83, 25);
+            this.radioButton5.TabIndex = 22;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "для стен";
+            this.radioButton5.UseVisualStyleBackColor = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.radioButton5);
+            this.groupBox3.Controls.Add(this.radioButton6);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(488, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(142, 80);
+            this.groupBox3.TabIndex = 98;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Назначение обоев";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(239, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(217, 135);
+            this.groupBox1.TabIndex = 132;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Укажите размеры комнаты";
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(943, 218);
+            this.button2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(910, 372);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 132;
-            this.button2.Text = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 57);
+            this.button2.TabIndex = 133;
+            this.button2.Text = "Очистить";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Создать_заказ_обои
             // 
@@ -418,17 +416,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1030, 464);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox8);
@@ -437,11 +429,12 @@
             this.Load += new System.EventHandler(this.Создать_заказ_обои_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,15 +464,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
 
     }

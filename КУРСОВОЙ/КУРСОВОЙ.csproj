@@ -101,7 +101,7 @@
       <DependentUpon>Создать_заказ_плитка_на_пол.cs</DependentUpon>
     </Compile>
     <Compile Include="Проданные товары.cs" />
-    <Compile Include="Tovary.cs" />
+    <Compile Include="Товары.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
