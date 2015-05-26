@@ -23,7 +23,7 @@ namespace КУРСОВОЙ
             set;
         }
         [Column]
-        public int id_товара
+        public int id_tovara
         {
             get;
             set;
@@ -36,7 +36,7 @@ namespace КУРСОВОЙ
         }
         public override string ToString()
         {
-            return id_проданные_товары + " | " + id_товара + " | " + id_продажи;
+            return id_проданные_товары + " | " + id_tovara + " | " + id_продажи;
         }
     }
     public class DB3 : DataContext
@@ -56,18 +56,18 @@ namespace КУРСОВОЙ
                 this.CreateDatabase();
             }
         }
-        public void ADD(int id_товара, int id_продажи)
+        public void ADD(int id_tovara, int id_продажи)
         {
             Проданные_товары SpTovProd = new Проданные_товары();
-            SpTovProd.id_товара = id_товара;
+            SpTovProd.id_tovara = id_tovara;
             SpTovProd.id_продажи = id_продажи;
             this.Проданные_товары.InsertOnSubmit(SpTovProd);
             this.SubmitChanges();
         }
-        public void Edit(int id_проданные_товары, int id_товара, int id_продажи)
+        public void Edit(int id_проданные_товары, int id_tovara, int id_продажи)
         {
             Проданные_товары SpTovProd = this.Проданные_товары.Where(c => c.id_проданные_товары == id_проданные_товары).FirstOrDefault();
-            SpTovProd.id_товара = id_товара;
+            SpTovProd.id_tovara = id_tovara;
             SpTovProd.id_продажи = id_продажи;
             this.SubmitChanges();
         }

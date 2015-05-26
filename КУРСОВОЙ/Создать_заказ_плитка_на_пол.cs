@@ -20,7 +20,7 @@ namespace КУРСОВОЙ
         {
             label4.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
             var c = Program.db2.Zapros(0);
-            foreach (Товары tov in c)
+            foreach (Tovary tov in c)
             {
                 listBox1.Items.Add(tov);
             }

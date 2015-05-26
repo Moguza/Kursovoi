@@ -36,7 +36,7 @@ namespace КУРСОВОЙ
             {
                 label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
                 var c = Program.db2.Zapros(0);
-                foreach (Товары tov in c)
+                foreach (Tovary tov in c)
                 {
                     listBox1.Items.Add(tov);
                 }
@@ -87,28 +87,6 @@ namespace КУРСОВОЙ
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Добавление_редактирование f2 = new Добавление_редактирование();
-            //   f2.typ = 0;
-            if (radioButton1.Checked == true)
-            {
-                f2.typ = 0;
-            }
-            if (radioButton2.Checked == true)
-            {
-                f2.typ = 1;
-            }
-            if (radioButton3.Checked == true)
-            {
-                f2.typ = 2;
-            }
-            if (radioButton4.Checked == true)
-            {
-                f2.typ = 3;
-            }
-            f2.ShowDialog();
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -116,7 +94,7 @@ namespace КУРСОВОЙ
             {
                 try
                 {
-                    if (textBox1.Text == "")
+                    if (textBox7.Text == "")
                     {
                         MessageBox.Show("Введите ID");
                         return;
@@ -127,10 +105,255 @@ namespace КУРСОВОЙ
                 int r;
                 r = Convert.ToInt32(textBox1.Text);
                 Program.db1.Delete(r);
-                MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице поставщики");
-                textBox1.Text = "";
+                MessageBox.Show("Вы удалили запись с id " + textBox7.Text + " в таблице поставщики");
+                textBox7.Text = "";
                 Vyvod();
             }
         }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                }
+                catch { }
+                Program.db1.ADD(textBox2.Text, textBox3.Text);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                MessageBox.Show("Новый клиент добавлен успешно!");
+                Vyvod();
+            }
+            if (radioButton2.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                }
+                catch { }
+                Program.db2.ADD(textBox2.Text, Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                MessageBox.Show("Новый товар добавлен!");
+                Vyvod();
+            }
+            if (radioButton3.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                }
+                catch { }
+                Program.db3.ADD(Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                textBox2.Text = "";
+                textBox3.Text = "";
+                MessageBox.Show("В список проданных товаров добавлена новая запись!");
+                Vyvod();
+            }
+            if (radioButton4.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                }
+                catch { }
+                Program.db4.ADD(Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), (float)Convert.ToDouble(textBox4.Text), (float)Convert.ToDouble(textBox5.Text), Convert.ToDateTime(textBox6.Text));
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                textBox5.Text = "";
+                textBox6.Text = "";
+                MessageBox.Show("В список продаж добавлена новая запись!");
+                Vyvod();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                    if (textBox7.Text == "")
+                    {
+                        MessageBox.Show("Вы не указали ID");
+                        return;
+                    }
+                }
+                catch { }
+                string s1, s2;
+                int id;
+                s1 = textBox2.Text;
+                s2 = textBox3.Text;
+                id = Convert.ToInt32(textBox7.Text);
+                Program.db1.Edit(id, s1, s2);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                MessageBox.Show("Вы изменили запись с id " + textBox7.Text + " в таблице клиенты");
+                textBox7.Text = "";
+                Vyvod();
+            }
+            if (radioButton2.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                    if (textBox7.Text == "")
+                    {
+                        MessageBox.Show("Вы не указали ID");
+                        return;
+                    }
+                }
+                catch { }
+                string s1;
+                float s2;
+                int s3, id;
+                s1 = textBox2.Text;
+                s2 = Convert.ToInt32(textBox2.Text);
+                s3 = Convert.ToInt32(textBox3.Text);
+                id = Convert.ToInt32(textBox7.Text);
+             Program.db2.Edit(id, s1, s2, s3);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                MessageBox.Show("Вы изменили запись с id " + textBox7.Text + " в таблице товары");
+                textBox7.Text = "";
+                Vyvod();
+            }
+            if (radioButton3.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                    if (textBox1.Text == "")
+                    {
+                        MessageBox.Show("Вы не указали ID");
+                        return;
+                    }
+                }
+                catch { }
+                int s1, s2, id;
+                s1 = Convert.ToInt32(textBox2.Text);
+                s2 = Convert.ToInt32(textBox3.Text);
+                id = Convert.ToInt32(textBox1.Text);
+                Program.db3.Edit(id, s1, s2);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                MessageBox.Show("Вы изменили запись с id " + textBox7.Text + " в таблице Список товаров по продажам");
+                textBox7.Text = "";
+                Vyvod();
+            }
+            if (radioButton4.Checked == true)
+            {
+                try
+                {
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == ""))
+                    {
+                        MessageBox.Show("Часть полей не заполнено");
+                        return;
+                    }
+                    if (textBox7.Text == "")
+                    {
+                        MessageBox.Show("Вы не указали ID");
+                        return;
+                    }
+                }
+                catch { }
+                int s1, s2, id;
+                float s3, s4;
+                DateTimeOffset s5;
+                s1 = Convert.ToInt32(textBox2.Text);
+                s2 = Convert.ToInt32(textBox3.Text);
+                s3 = (float)Convert.ToDouble(textBox4.Text);
+                s4 = (float)Convert.ToDouble(textBox5.Text);
+                s5 = Convert.ToDateTime(textBox6.Text);
+                id = Convert.ToInt32(textBox7.Text);
+                Program.db4.Edit(id, s1, s2, s3, s4, s5);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                textBox5.Text = "";
+                textBox6.Text = "";
+                MessageBox.Show("Вы изменили запись с id " + textBox7.Text + " в таблице Продажа");
+                textBox7.Text = "";
+                Vyvod();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label3.Text = "ФИО";
+            label4.Text = "Почта";
+            label5.Text = "----------";
+            label6.Text = "----------";
+            label7.Text = "----------";
+        }
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label3.Text = "Наименование";
+            label4.Text = "Цена";
+            label5.Text = "Количество";
+            label6.Text = "----------";
+            label7.Text = "----------";
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            label3.Text = "id_товара";
+            label4.Text = "id_продажи";
+            label5.Text = "----------";
+            label6.Text = "----------";
+            label7.Text = "----------";
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            label3.Text = "id_клиента";
+            label4.Text = "Количество";
+            label5.Text = "Цена";
+            label6.Text = "Стоимость";
+            label7.Text = "Дата_продажи";
+        }
+
+
+        
+
+
     }
 }

@@ -82,6 +82,7 @@ namespace КУРСОВОЙ
         public List<Клиенты> Zapros(int id_клиента)
         {
             return this.Клиенты.Select(c => c).ToList();
+           // return null;
         }
     }
 }

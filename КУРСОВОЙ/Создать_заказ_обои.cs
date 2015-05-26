@@ -20,7 +20,7 @@ namespace КУРСОВОЙ
         {
             label6.Text = ("id_товара" + " | " + "Наименование" + " | " + "Цена" + " | " + "Количество");
             var c = Program.db2.Zapros(0);
-            foreach (Товары tov in c)
+            foreach (Tovary tov in c)
             {
                 listBox1.Items.Add(tov);
             }
@@ -40,6 +40,30 @@ namespace КУРСОВОЙ
         {
             try
             {
+                string str = listBox1.SelectedItem.ToString();
+                //     MessageBox.Show("Данные найдены");
+                char razd = '|';
+                string[] words = str.Split(razd);
+                int N = words.Length;
+                List<string> list = new List<string>();
+                int M = 0;
+                for (int i = 0; i < N; i++)
+                {
+                    if ((words[i] != "") && (words[i] != "\n"))
+                    {
+                        list.Add(words[i]);
+                        M++;
+                    }
+                }
+                for (int i = 0; i < N; i++)
+                {
+                    Program.cena = Convert.ToInt32(list[2]);
+                }
+                //   MessageBox.Show(Program.cena.ToString());
+            }
+            catch { MessageBox.Show("выделите строку"); }
+            try
+            {
                 a = Convert.ToDouble(textBox1.Text);
                 b = Convert.ToDouble(textBox2.Text);
                 c = Convert.ToDouble(textBox3.Text);
@@ -52,33 +76,55 @@ namespace КУРСОВОЙ
 
                 if (radioButton5.Checked == true)
                 {
-                    if (radioButton7.Checked == true)
-                    {
-                        k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (53 * 1005);
-                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
-                    }
-                    if (radioButton8.Checked == true)
-                    {
+                    
                         k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (106 * 1005);
-                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
-                    }
+                        double s = Math.Ceiling(k) * Program.cena;
+                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
+                   
                 }
                 if (radioButton6.Checked == true)
                 {
-                    if (radioButton7.Checked == true)
-                    {
-                        k = (a * b) / (53 * 1005);
-                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
-                    }
-                    if (radioButton8.Checked == true)
-                    {
-                        k = (a * b) / (53 * 1005);
-                        textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов";
-                    }
+                    k = (a * b) / (106 * 1005);
+                    double s = Math.Ceiling(k) * Program.cena;
+                    textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
                 }
             }
             catch
             { MessageBox.Show("Вы ввели не все параметры"); }
+           
+
+            //что листбокс выделен!
+
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+       //     var tovar = from c in Program.db2.Товары where c.Цена = Convert.ToString(textBox2.Text) select c;
+            try
+            {
+                string str = listBox1.SelectedItem.ToString();
+                MessageBox.Show("Данные найдены");
+                char razd = '|';
+                string[] words = str.Split(razd);
+                int N = words.Length;
+                List<string> list = new List<string>();
+                int M = 0;
+                for (int i = 0; i < N; i++)
+                {
+                    if ((words[i] != "") && (words[i] != "\n"))
+                    {
+                        list.Add(words[i]);
+                        M++;
+                    }
+                }
+                for (int i = 0; i < N; i++)
+                {
+                    Program.cena = Convert.ToInt32(list[2]);
+                }
+                MessageBox.Show(Program.cena.ToString());
+            }
+            catch { MessageBox.Show("выделите строку"); }
         }
 
         

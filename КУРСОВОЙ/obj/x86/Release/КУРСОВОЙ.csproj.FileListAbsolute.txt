@@ -1,0 +1,6 @@
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Form1.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Properties.Resources.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Меню.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Создать_заказ_обои.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Создать_заказ_плитка_на_пол.resources
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.csproj.GenerateResource.Cache

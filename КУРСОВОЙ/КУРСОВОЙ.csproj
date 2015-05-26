@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -70,17 +70,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Добавление_редактирование.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Добавление_редактирование.Designer.cs">
-      <DependentUpon>Добавление_редактирование.cs</DependentUpon>
-    </Compile>
     <Compile Include="Клиенты.cs" />
     <Compile Include="КУРСОВОЙDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>КУРСОВОЙDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="КУРСОВОЙ_NEWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>КУРСОВОЙ_NEWDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Меню.cs">
       <SubType>Form</SubType>
@@ -102,7 +101,7 @@
       <DependentUpon>Создать_заказ_плитка_на_пол.cs</DependentUpon>
     </Compile>
     <Compile Include="Проданные товары.cs" />
-    <Compile Include="Товары.cs" />
+    <Compile Include="Tovary.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,9 +115,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Добавление_редактирование.resx">
-      <DependentUpon>Добавление_редактирование.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Меню.resx">
       <DependentUpon>Меню.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,18 +145,26 @@
     <None Include="КУРСОВОЙDataSet.xss">
       <DependentUpon>КУРСОВОЙDataSet.xsd</DependentUpon>
     </None>
+    <None Include="КУРСОВОЙ_NEWDataSet.xsc">
+      <DependentUpon>КУРСОВОЙ_NEWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="КУРСОВОЙ_NEWDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>КУРСОВОЙ_NEWDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="КУРСОВОЙ_NEWDataSet.xss">
+      <DependentUpon>КУРСОВОЙ_NEWDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="КУРСОВОЙ_NEW.mdf" />
+    <Content Include="КУРСОВОЙ_NEW_log.ldf">
+      <DependentUpon>КУРСОВОЙ_NEW.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\б.jpg" />
     <None Include="Resources\олт.jpg" />
     <None Include="Resources\login-icon-free-download-75.jpg" />
-    <Content Include="КУРСОВОЙ.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="КУРСОВОЙ_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>КУРСОВОЙ.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
