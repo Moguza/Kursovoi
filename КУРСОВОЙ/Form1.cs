@@ -166,7 +166,7 @@ namespace КУРСОВОЙ
             {
                 try
                 {
-                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == ""))
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
