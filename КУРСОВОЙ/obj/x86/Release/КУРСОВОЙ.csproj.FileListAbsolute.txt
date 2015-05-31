@@ -4,3 +4,9 @@ C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУ�
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Создать_заказ_обои.resources
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.Создать_заказ_плитка_на_пол.resources
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.csproj.GenerateResource.Cache
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Release\КУРСОВОЙ.exe.config
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Release\КУРСОВОЙ.exe
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Release\КУРСОВОЙ.pdb
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Release\itextsharp.dll
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.exe
+C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Release\КУРСОВОЙ.pdb

@@ -19,6 +19,8 @@ namespace КУРСОВОЙ
         public static int cena_pl;
         public static int razmer;
         public static int razmer_pl;
+        public static int id_kl;
+        public static int id_tov;
         [STAThread]
         static void Main()
         {

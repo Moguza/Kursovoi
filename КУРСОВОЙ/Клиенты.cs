@@ -37,7 +37,7 @@ namespace КУРСОВОЙ
         }
         public override string ToString()
         {
-            return id_клиента + " | " + ФИО + " | " + Почта;
+            return id_клиента + "            | " + ФИО + " | " + Почта;
         }
     }
     public class DB1 : DataContext

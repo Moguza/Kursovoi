@@ -31,6 +31,12 @@ namespace КУРСОВОЙ
             {
                 listBox1.Items.Add(tov);
             }
+            label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
+            var a = Program.db1.Zapros(0);
+            foreach (Клиенты kl in a)
+            {
+                listBox2.Items.Add(kl);
+            }
         }
         public string way_dog = @"C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\Отчёт\";
         public double a; //длина
@@ -43,6 +49,7 @@ namespace КУРСОВОЙ
         public double ok_a;//длина окна
         public double ok_b;//ширина окна
         public int ok_k;// число окон
+        public double s;//стоимость
  
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,9 +83,11 @@ namespace КУРСОВОЙ
                         {
                             Program.cena = Convert.ToInt32(list[3]);
                             Program.razmer = Convert.ToInt32(list[2]);
+                            Program.id_tov = Convert.ToInt32(list[0]);
                         }
                     }
                     catch { MessageBox.Show("выделите строку"); } //КАК СДЕЛАТЬ ЧТОБЫ ДАЛЬШЕ НЕ ШЛО ?!
+
                     try
                     {
                         a = Convert.ToDouble(textBox1.Text);
@@ -98,7 +107,7 @@ namespace КУРСОВОЙ
                                 if (Program.razmer == 100)
                                 {
                                     k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (106 * 1005);
-                                    double s = Math.Ceiling(k) * Program.cena;
+                                    s = Math.Ceiling(k) * Program.cena;
                                     MessageBox.Show("Размер " + Program.razmer);
                                     textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
                                     button2.Enabled = true;
@@ -107,15 +116,15 @@ namespace КУРСОВОЙ
                                 if (Program.razmer == 50)
                                 {
                                     k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (53 * 1005);
-                                    double s = Math.Ceiling(k) * Program.cena;
+                                    s = Math.Ceiling(k) * Program.cena;
                                     textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
                                     button2.Enabled = true;
                                     button3.Enabled = true;
                                 }
                             }
-                            catch { MessageBox.Show("Неверный размер , возможно, вы выбрали не обои"); } //ПОЧЕМУ НЕ РАБОТЕТ ?!!!
-
+                            catch { MessageBox.Show("Неверный размер , возможно, вы выбрали не обои"); } //ПОЧЕМУ НЕ РАБОТЕТ 
                         }
+
                         if (radioButton6.Checked == true)
                         {
                             try
@@ -123,7 +132,7 @@ namespace КУРСОВОЙ
                                 if (Program.razmer == 100)
                                 {
                                     k = (a * b) / (106 * 1005);
-                                    double s = Math.Ceiling(k) * Program.cena;
+                                    s = Math.Ceiling(k) * Program.cena;
                                     textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
                                     button2.Enabled = true;
                                     button3.Enabled = true;
@@ -131,7 +140,7 @@ namespace КУРСОВОЙ
                                 if (Program.razmer == 50)
                                 {
                                     k = (a * b) / (53 * 1005);
-                                    double s = Math.Ceiling(k) * Program.cena;
+                                    s = Math.Ceiling(k) * Program.cena;
                                     textBox8.Text = "вам потребуется " + Math.Ceiling(k) + " рулонов стоимостью " + Math.Ceiling(s) + " рублей";
                                     button2.Enabled = true;
                                     button3.Enabled = true;
@@ -146,8 +155,6 @@ namespace КУРСОВОЙ
                 }
             }
             catch { MessageBox.Show("Вы ввели не все параметры!"); }
-            
-           
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -201,9 +208,37 @@ namespace КУРСОВОЙ
             button3.Enabled = false;
         }
 
-        
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string str = listBox2.SelectedItem.ToString();
+                //     MessageBox.Show("Данные найдены");
+                char razd = '|';
+                string[] words = str.Split(razd);
+                int N = words.Length;
+                List<string> list = new List<string>();
+                int M = 0;
+                for (int i = 0; i < N; i++)
+                {
+                    if ((words[i] != "") && (words[i] != "\n"))
+                    {
+                        list.Add(words[i]);
+                        M++;
+                    }
+                } 
 
-        
+                for (int i = 0; i < N; i++)
+                {
+                    Program.id_kl = Convert.ToInt32(list[0]);
+                    Program.id_tov = Convert.ToInt32(list[5]);
+                }
+
+                int id = Program.db4.ADD(Program.id_kl, (int)Math.Ceiling(k), Program.cena, (int)Math.Ceiling(s), DateTime.Now, Program.id_tov);
+                Program.db3.ADD(Program.id_tov, id);
+            }
+            catch { MessageBox.Show("выделите строку"); } //КАК СДЕЛАТЬ ЧТОБЫ ДАЛЬШЕ НЕ ШЛО ?!
+        }
+
     }
 }

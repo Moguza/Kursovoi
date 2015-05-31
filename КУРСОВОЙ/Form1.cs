@@ -21,7 +21,7 @@ namespace КУРСОВОЙ
             InitializeComponent();
         }
 
-        public void Vyvod()
+        public void Vyvod() //МЕТОД ВЫВОД
         {
             if (radioButton1.Checked == true)
             {
@@ -52,7 +52,7 @@ namespace КУРСОВОЙ
             }
             if (radioButton4.Checked == true)
             {
-                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи");
+                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи" + " | " + "id_товара");
                 var c = Program.db4.Zapros(0);
                 foreach (Продажа prod in c)
                 {
@@ -61,88 +61,71 @@ namespace КУРСОВОЙ
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //УДАЛЕНИЕ
         {
             if (radioButton1.Checked == true)
             {
-                try
+                var client = Program.db1.Клиенты.FirstOrDefault(c => c.ФИО == textBox1.Text);
+                if (client == null)
                 {
-                    if (textBox1.Text == "")
-                    {
-                        MessageBox.Show("Введите ID");
-                        return;
-                    }
+                    MessageBox.Show("Клиента с таким ФИО нет");
+                    return;
                 }
-                catch { }
+
+                var prpodajs = Program.db4.Продажа.Where(p => p.id_клиента == client.id_клиента);
+
+                foreach(var p in prpodajs)
+                {
+                    var prodTovar = Program.db3.Проданные_товары.Where(pt => pt.id_продажи == p.id_продажи);
+                    Program.db3.Проданные_товары.DeleteAllOnSubmit(prodTovar);
+                    Program.db3.SubmitChanges();
+                }
+
+                Program.db4.Продажа.DeleteAllOnSubmit(prpodajs);
+                Program.db4.SubmitChanges();
+
+                Program.db1.Клиенты.DeleteOnSubmit(client);
+                Program.db1.SubmitChanges();
                 listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox1.Text);
-                Program.db1.Delete(r);
-                MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице клинеты");
-                textBox1.Text = "";
                 Vyvod();
+                MessageBox.Show("Удаден клиент " + textBox1.Text);
+                return;
             }
             if (radioButton2.Checked == true)
             {
-                try
+                var tovar = Program.db2.Товар.FirstOrDefault(c => c.Наименование == textBox1.Text);
+                if (tovar == null)
                 {
-                    if (textBox1.Text == "")
-                    {
-                        MessageBox.Show("Введите ID");
-                        return;
-                    }
+                    MessageBox.Show("Товара с таким наименованием нет");
+                    return;
                 }
-                catch { }
-                listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox1.Text);
-                Program.db2.Delete(r);
-                MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице товары");
-                textBox1.Text = "";
-                Vyvod();
-            }
-            if (radioButton3.Checked == true)
-            {
-                try
+
+                var prpodajs = Program.db4.Продажа.Where(p => p.id_товара == tovar.id_товара);
+
+                foreach (var p in prpodajs)
                 {
-                    if (textBox1.Text == "")
-                    {
-                        MessageBox.Show("Введите ID");
-                        return;
-                    }
+                    var prodTovar = Program.db3.Проданные_товары.Where(pt => pt.id_продажи == p.id_продажи);
+                    Program.db3.Проданные_товары.DeleteAllOnSubmit(prodTovar);
+                    Program.db3.SubmitChanges();
                 }
-                catch { }
+
+                Program.db4.Продажа.DeleteAllOnSubmit(prpodajs);
+                Program.db4.SubmitChanges();
+
+                Program.db2.Товар.DeleteOnSubmit(tovar);
+                Program.db2.SubmitChanges();
+
                 listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox1.Text);
-                Program.db3.Delete(r);
-                MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице проданные товары");
-                textBox1.Text = "";
                 Vyvod();
+
+                MessageBox.Show("Удаден товар " + textBox1.Text);
+                return;
             }
-            if (radioButton4.Checked == true)
-            {
-                try
-                {
-                    if (textBox1.Text == "")
-                    {
-                        MessageBox.Show("Введите ID");
-                        return;
-                    }
-                }
-                catch { }
-                listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox1.Text);
-                Program.db4.Delete(r);
-                MessageBox.Show("Вы удалили запись с id " + textBox1.Text + " в таблице продажа");
-                textBox1.Text = "";
-                Vyvod();
-            }
+
         }
 
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)//ДОБАВЛЕНИЕ
         {
             if (radioButton1.Checked == true)
             {
@@ -204,7 +187,7 @@ namespace КУРСОВОЙ
             {
                 try
                 {
-                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == ""))
+                    if ((textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == "") || (textBox8.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -212,18 +195,19 @@ namespace КУРСОВОЙ
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db4.ADD(Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), (float)Convert.ToDouble(textBox4.Text), (float)Convert.ToDouble(textBox5.Text), Convert.ToDateTime(textBox6.Text));
+                Program.db4.ADD(Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), (float)Convert.ToDouble(textBox4.Text), (float)Convert.ToDouble(textBox5.Text), Convert.ToDateTime(textBox6.Text), Convert.ToInt32(textBox7.Text));
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
                 textBox6.Text = "";
+                textBox8.Text = "";
                 MessageBox.Show("В список продаж добавлена новая запись!");
                 Vyvod();
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)//ИЗМЕНЕИЕ ПО АЙДИ
         {
             if (radioButton1.Checked == true)
             {
@@ -332,7 +316,7 @@ namespace КУРСОВОЙ
                 }
                 catch { }
                 listBox1.Items.Clear();
-                int s1, s2, id;
+                int s1, s2, s6, id;
                 float s3, s4;
                 DateTimeOffset s5;
                 s1 = Convert.ToInt32(textBox2.Text);
@@ -340,13 +324,15 @@ namespace КУРСОВОЙ
                 s3 = (float)Convert.ToDouble(textBox4.Text);
                 s4 = (float)Convert.ToDouble(textBox5.Text);
                 s5 = Convert.ToDateTime(textBox6.Text);
+                s6 = Convert.ToInt32(textBox7.Text);
                 id = Convert.ToInt32(textBox7.Text);
-                Program.db4.Edit(id, s1, s2, s3, s4, s5);
+                Program.db4.Edit(id, s1, s2, s3, s4, s5, s6);
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
                 textBox6.Text = "";
+                textBox7.Text = "";
                 MessageBox.Show("Вы изменили запись с id " + textBox7.Text + " в таблице Продажа");
                 textBox7.Text = "";
                 Vyvod();
@@ -360,6 +346,7 @@ namespace КУРСОВОЙ
             label5.Text = "----------";
             label6.Text = "----------";
             label7.Text = "----------";
+            label9.Text = "----------";
             listBox1.Items.Clear();
             Vyvod();
         }
@@ -370,6 +357,7 @@ namespace КУРСОВОЙ
             label5.Text = "Цена(рулон, кв. м)";
             label6.Text = "Количество";
             label7.Text = "----------";
+            label9.Text = "----------";
             listBox1.Items.Clear();
              Vyvod();
         }
@@ -381,6 +369,7 @@ namespace КУРСОВОЙ
             label5.Text = "----------";
             label6.Text = "----------";
             label7.Text = "----------";
+            label9.Text = "----------";
             listBox1.Items.Clear();
             Vyvod();
         }
@@ -392,11 +381,61 @@ namespace КУРСОВОЙ
             label5.Text = "Цена";
             label6.Text = "Стоимость";
             label7.Text = "Дата_продажи";
+            label9.Text = "id_товара";
             listBox1.Items.Clear();
             Vyvod();
         }
 
+        private void button1_Click(object sender, EventArgs e) //ПОИСК
+        {
+            listBox1.Items.Clear();
+            if (radioButton1.Checked == true)
+            {
+                var clientList = Program.db1.Клиенты.ToList();
+                var clients = clientList.Where(c => c.ФИО.ToLower().Contains(textBox7.Text.ToLower())).ToList();
+                //FirstOrDefault -> null то записи такой нет, если не null то есть
 
+                label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
+                foreach (Клиенты kl in clients)
+                {
+                    listBox1.Items.Add(kl);
+                }
+            }
+            if (radioButton2.Checked == true)
+            {
+                var tovarList = Program.db2.Товар.ToList();
+                var tovaty = tovarList.Where(c => c.Наименование.ToLower().Contains(textBox7.Text.ToLower())).ToList();
+                label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Размер" + " | " + "Цена" + " | " + "Количество");
+                foreach (Товары tov in tovaty)
+                {
+                    listBox1.Items.Add(tov);
+                }
+            }
+            if (radioButton3.Checked == true)
+            {
+                //var prod_tovList = Program.db3.Проданные_товары.ToList();
+                //var prod_tovary = prod_tovList.Where(c => c.id_продажи.ToLower().Contains(textBox7.Text.ToLower())).ToList();
+                ////FirstOrDefault -> null то записи такой нет, если не null то есть
+
+                //label1.Text = ("id_проданные_товары" + " | " + "id_товара" + " | " + "id_продажи");
+                //foreach (Проданные_товары pr_tov in prod_tovary)
+                //{
+                //    listBox1.Items.Add(pr_tov);
+                //}
+            }
+            if (radioButton4.Checked == true)
+            {
+                //var clientList = Program.db1.Клиенты.ToList();
+                //var clients = clientList.Where(c => c.ФИО.ToLower().Contains(textBox7.Text.ToLower())).ToList();
+                ////FirstOrDefault -> null то записи такой нет, если не null то есть
+
+                //label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи");
+                //foreach (Клиенты kl in clients)
+                //{
+                //    listBox1.Items.Add(kl);
+                //}
+            }
+        }
 
 
 

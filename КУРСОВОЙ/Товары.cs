@@ -40,7 +40,7 @@ namespace КУРСОВОЙ
             get;
             set;
         }
-        [Column]
+        [Column(DbType = "int")]
         public int Количество
         {
             get;
@@ -48,7 +48,7 @@ namespace КУРСОВОЙ
         }
         public override string ToString()
         {
-            return id_товара + " | " + Наименование + " | " + Размер + " | " + Цена + " | " + Количество;
+            return id_товара + "           | " + Наименование + " | " + Размер + " | " + Цена + " | " + Количество;
         }
     }
     public class DB2 : DataContext
@@ -57,7 +57,7 @@ namespace КУРСОВОЙ
             : base(cs)
         {
         }
-        public System.Data.Linq.Table<Товары> Tovar
+        public System.Data.Linq.Table<Товары> Товар
         {
             get { return this.GetTable<Товары>(); }
         }
@@ -75,12 +75,12 @@ namespace КУРСОВОЙ
             tov.Размер = Размер;
             tov.Цена = Цена;
             tov.Количество = Количество;
-            this.Tovar.InsertOnSubmit(tov);
+            this.Товар.InsertOnSubmit(tov);
             this.SubmitChanges();
         }
         public void Edit(int id_товара, string Наименование, float Размер, float Цена, int Количество)
         {
-            Товары tov = this.Tovar.Where(c => c.id_товара == id_товара).FirstOrDefault();
+            Товары tov = this.Товар.Where(c => c.id_товара == id_товара).FirstOrDefault();
             tov.Наименование = Наименование;
             tov.Размер = Размер;
             tov.Цена = Цена;
@@ -89,13 +89,13 @@ namespace КУРСОВОЙ
         }
         public void Delete(int id_товара)
         {
-            Товары tov = this.Tovar.Where(c => c.id_товара == id_товара).FirstOrDefault();
-            this.Tovar.DeleteOnSubmit(tov);
+            Товары tov = this.Товар.Where(c => c.id_товара == id_товара).FirstOrDefault();
+            this.Товар.DeleteOnSubmit(tov);
             this.SubmitChanges();
         }
         public List<Товары> Zapros(int id_товара)
         {
-            return this.Tovar.Select(c => c).ToList();
+            return this.Товар.Select(c => c).ToList();
             //   return null;
         }
 

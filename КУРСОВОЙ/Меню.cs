@@ -36,6 +36,7 @@ namespace КУРСОВОЙ
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if (comboBox1.Text == "Список клиентов")
             {
                 label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
@@ -47,7 +48,7 @@ namespace КУРСОВОЙ
             }
             if (comboBox1.Text == "Список товаров")
             {
-                label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Размер" + " | " + "Цена" + " | " + "Количество");
+                label1.Text = ("id_товара" + " | " + "Наименование" + " | " + "Размер" + " | " + "Цена" + " | " + "Количество" );
                 var c = Program.db2.Zapros(0);
                 foreach (Товары tov in c)
                 {
@@ -65,7 +66,7 @@ namespace КУРСОВОЙ
             }
             if (comboBox1.Text == "Заказы")
             {
-                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи");
+                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи" + " | " + "id_товара");
                 var c = Program.db4.Zapros(0);
                 foreach (Продажа prod in c)
                 {
