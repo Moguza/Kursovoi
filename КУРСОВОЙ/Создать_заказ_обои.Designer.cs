@@ -94,9 +94,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(6, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(36, 17);
             this.label6.TabIndex = 128;
             this.label6.Text = "поля";
             // 
@@ -341,19 +342,21 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 34);
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Location = new System.Drawing.Point(6, 41);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(389, 134);
+            this.listBox1.Size = new System.Drawing.Size(389, 123);
             this.listBox1.TabIndex = 127;
             // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(260, 359);
+            this.textBox8.Location = new System.Drawing.Point(280, 424);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(307, 105);
+            this.textBox8.Size = new System.Drawing.Size(307, 40);
             this.textBox8.TabIndex = 126;
             // 
             // radioButton6
@@ -427,23 +430,27 @@
             // 
             // listBox2
             // 
+            this.listBox2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 17;
             this.listBox2.Location = new System.Drawing.Point(6, 38);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(389, 108);
+            this.listBox2.Size = new System.Drawing.Size(389, 106);
             this.listBox2.TabIndex = 135;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 136;
             this.label1.Text = "поля";
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(1055, 190);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 57);
@@ -454,6 +461,7 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(304, 192);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 29);
@@ -464,6 +472,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox9.Location = new System.Drawing.Point(9, 192);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
@@ -474,14 +483,16 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(6, 176);
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(6, 170);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.Size = new System.Drawing.Size(67, 17);
             this.label14.TabIndex = 138;
             this.label14.Text = "Название";
             // 
             // button5
             // 
+            this.button5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(304, 170);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 29);
@@ -492,6 +503,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox10.Location = new System.Drawing.Point(9, 170);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
@@ -502,9 +514,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(6, 154);
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(6, 148);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 13);
+            this.label15.Size = new System.Drawing.Size(67, 17);
             this.label15.TabIndex = 141;
             this.label15.Text = "Название";
             // 
@@ -516,12 +529,13 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(642, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(407, 231);
             this.groupBox2.TabIndex = 144;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "КЛИЕНТЫ";
+            this.groupBox2.Text = "ТОВАРЫ";
             // 
             // groupBox6
             // 
@@ -531,18 +545,20 @@
             this.groupBox6.Controls.Add(this.button5);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.textBox10);
+            this.groupBox6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox6.Location = new System.Drawing.Point(642, 254);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(407, 210);
             this.groupBox6.TabIndex = 145;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "ТОВАРЫ";
+            this.groupBox6.Text = "КЛИЕНТЫ";
             // 
             // button6
             // 
+            this.button6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(1056, 117);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 49);
+            this.button6.Size = new System.Drawing.Size(114, 54);
             this.button6.TabIndex = 146;
             this.button6.Text = "Создать накладную";
             this.button6.UseVisualStyleBackColor = true;

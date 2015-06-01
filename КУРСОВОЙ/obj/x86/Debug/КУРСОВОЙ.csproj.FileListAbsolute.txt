@@ -2,7 +2,6 @@ c:\users\ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУ�
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Debug\КУРСОВОЙ.exe
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Debug\КУРСОВОЙ.pdb
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.csprojResolveAssemblyReference.cache
-C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Form1.resources
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Properties.Resources.resources
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.csproj.GenerateResource.Cache
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.exe
@@ -11,3 +10,4 @@ C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУ�
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Создать_заказ_обои.resources
 C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Создать_заказ_плитка_на_пол.resources
 C:\Users\Ольга\documents\visual studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\bin\Debug\itextsharp.dll
+C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\obj\x86\Debug\КУРСОВОЙ.Изменить_БД.resources

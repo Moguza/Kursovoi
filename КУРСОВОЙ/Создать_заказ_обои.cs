@@ -25,170 +25,25 @@ namespace КУРСОВОЙ
         {
             button2.Enabled = false;
             button4.Enabled = false;
+            button6.Enabled = false;
             label6.Text = ("id_товара" + " | " + "Наименование" + " | " + "Размер" + " | " + "Цена" + " | " + "Количество");
             var c = Program.db2.Zapros(0);
             foreach (Товары tov in c)
             {
                 listBox1.Items.Add(tov);
             }
-            label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
+            label1.Text = ("id_клиента" + " | " + "                ФИО                " + " | " + "Почта");
             var a = Program.db1.Zapros(0);
             foreach (Клиенты kl in a)
             {
                 listBox2.Items.Add(kl);
             }
         }
-        public double a; //длина
-        public double b; // ширина
-        public double c; //высота
-        public double dv_a;//длина  двери
-        public double dv_b;//ширина двери
-        public double dv_k;// число дверей
-        public double ok_a;//длина окна
-        public double ok_b;//ширина окна
-        public int ok_k;// число окон
-
-        public void razd_kl()
+        public void Obnovlenie()
         {
-            try
-            {
-                string str = listBox2.SelectedItem.ToString();
-                char razd = '|';
-                string[] words = str.Split(razd);
-                int N = words.Length;
-                List<string> list = new List<string>();
-                int M = 0;
-                for (int i = 0; i < N; i++)
-                {
-                    if ((words[i] != "") && (words[i] != "\n"))
-                    {
-                        list.Add(words[i]);
-                        M++;
-                    }
-                }
-
-                for (int i = 0; i < N; i++)
-                {
-                    Program.id_kl = Convert.ToInt32(list[0]);
-                    Program.FIO = Convert.ToString(list[1]);
-                    Program.mail = Convert.ToString(list[2]);
-                }
-            }
-            catch
-            { MessageBox.Show("Выделите строку"); return; }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if ((Convert.ToInt32(textBox1.Text) < 200) || ((Convert.ToInt32(textBox2.Text) < 200)) || ((Convert.ToInt32(textBox3.Text) < 100)) || (Convert.ToInt32(textBox4.Text) < 50) || (Convert.ToInt32(textBox5.Text) < 50) || (Convert.ToInt32(textBox6.Text) < 50) || (Convert.ToInt32(textBox7.Text) < 50))
-                {
-                    MessageBox.Show("Вводите размеры в сантиметрах");
-                }
-                else
-                {
-                    try
-                    {
-                        string str = listBox1.SelectedItem.ToString();
-                        //     MessageBox.Show("Данные найдены");
-                        char razd = '|';
-                        string[] words = str.Split(razd);
-                        int N = words.Length;
-                        List<string> list = new List<string>();
-                        int M = 0;
-                        for (int i = 0; i < N; i++)
-                        {
-                            if ((words[i] != "") && (words[i] != "\n"))
-                            {
-                                list.Add(words[i]);
-                                M++;
-                            }
-                        }
-                        for (int i = 0; i < N; i++)
-                        {
-                            Program.cena = Convert.ToDouble(list[3]);
-                            Program.kolichestvo = Convert.ToDouble(list[4]);
-                            Program.naim = Convert.ToString(list[1]);
-                            Program.razmer = Convert.ToInt32(list[2]);
-                            Program.id_tov = Convert.ToInt32(list[0]);
-                        }
-                    }
-                    catch { MessageBox.Show("выделите строку"); return;  } 
-
-                    try
-                    {
-                        a = Convert.ToDouble(textBox1.Text);
-                        b = Convert.ToDouble(textBox2.Text);
-                        c = Convert.ToDouble(textBox3.Text);
-                        dv_a = Convert.ToDouble(textBox4.Text);
-                        dv_b = Convert.ToDouble(textBox5.Text);
-                        dv_k = Convert.ToInt32(comboBox1.Text);
-                        ok_a = Convert.ToDouble(textBox6.Text);
-                        ok_b = Convert.ToDouble(textBox7.Text);
-                        ok_k = Convert.ToInt32(comboBox2.Text);
-
-                        if (radioButton5.Checked == true)
-                        {
-                            try
-                            {
-
-                                if (Program.razmer == 100)
-                                {
-                                    Program.k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (106 * 1005);
-                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
-                                    MessageBox.Show("Размер " + Program.razmer);
-                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
-
-                                    Program.new_kolichestvo = Program.kolichestvo - Program.k;
-                                }
-                                if (Program.razmer == 50)
-                                {
-                                    Program.k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (53 * 1005);
-                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
-                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
-
-                                    Program.new_kolichestvo = Program.kolichestvo - Program.k;
-                                }
-                            }
-                            catch { MessageBox.Show("Неверный размер , возможно, вы выбрали не обои"); return; } 
-                    }
-                        
-
-                        if (radioButton6.Checked == true)
-                        {
-                            try
-                            {
-                                if (Program.razmer == 100)
-                                {
-                                    Program.k = (a * b) / (106 * 1005);
-                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
-                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
-
-                                    Program.new_kolichestvo = Program.kolichestvo - Program.k;
-                                }
-                                if (Program.razmer == 50)
-                                {
-                                    Program.k = (a * b) / (53 * 1005);
-                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
-                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
-
-                                    Program.new_kolichestvo = Program.kolichestvo - Program.k;
-                                }
-                            }
-                            catch { MessageBox.Show("Неверный размер , возможно, вы выбрали не обои"); return; }
-
-                        }
-                    }
-                    catch
-                    { MessageBox.Show("Вы ввели не все параметры"); return; }
-                }
-            }
-            catch { MessageBox.Show("Вы ввели не все параметры!"); return; }
-        }//РАССЧИТЫВАЕТСЯ И СОЗДАЁТСЯ НАКЛАДНАЯ 
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
+            button2.Enabled = false;
+            button4.Enabled = false;
+            button6.Enabled = false;
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -207,7 +62,7 @@ namespace КУРСОВОЙ
             {
                 listBox1.Items.Add(tov);
             }
-            label1.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
+            label1.Text = ("id_клиента" + " | " + "                ФИО                " + " | " + "Почта");
             var a = Program.db1.Zapros(0);
             foreach (Клиенты kl in a)
             {
@@ -215,16 +70,160 @@ namespace КУРСОВОЙ
             }
         }
 
-      
+        public double a; //длина
+        public double b; // ширина
+        public double c; //высота
+        public double dv_a;//длина  двери
+        public double dv_b;//ширина двери
+        public double dv_k;// число дверей
+        public double ok_a;//длина окна
+        public double ok_b;//ширина окна
+        public int ok_k;// число окон
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((Convert.ToInt32(textBox1.Text) < 200) || ((Convert.ToInt32(textBox2.Text) < 200)) || ((Convert.ToInt32(textBox3.Text) < 100)) || (Convert.ToInt32(textBox4.Text) < 50) || (Convert.ToInt32(textBox5.Text) < 50) || (Convert.ToInt32(textBox6.Text) < 50) || (Convert.ToInt32(textBox7.Text) < 50))
+                {
+                    MessageBox.Show("Вводите размеры в сантиметрах");
+                }
+                else
+                {
+                    try
+                    {
+                        string str = listBox1.SelectedItem.ToString();
+                        char razd = '|';
+                        string[] words = str.Split(razd);
+                        int N = words.Length;
+                        List<string> list = new List<string>();
+                        int M = 0;
+                        for (int i = 0; i < N; i++)
+                        {
+                            if ((words[i] != "") && (words[i] != "\n"))
+                            {
+                                list.Add(words[i]);
+                                M++;
+                            }
+                        }
+                        for (int i = 0; i < N; i++)
+                        {
+                            Program.id_tov = Convert.ToInt32(list[0]);
+                            Program.naim = Convert.ToString(list[1]);
+                            Program.razmer = Convert.ToInt32(list[2]);
+                            Program.cena = Convert.ToDouble(list[3]);
+                            Program.kolichestvo = Convert.ToDouble(list[4]);
+                        }
+                    }
+                    catch { MessageBox.Show("выделите строку"); return; } 
+
+                    try
+                    {
+                        a = Convert.ToDouble(textBox1.Text);
+                        b = Convert.ToDouble(textBox2.Text);
+                        c = Convert.ToDouble(textBox3.Text);
+                        dv_a = Convert.ToDouble(textBox4.Text);
+                        dv_b = Convert.ToDouble(textBox5.Text);
+                        dv_k = Convert.ToInt32(comboBox1.Text);
+                        ok_a = Convert.ToDouble(textBox6.Text);
+                        ok_b = Convert.ToDouble(textBox7.Text);
+                        ok_k = Convert.ToInt32(comboBox2.Text);
+
+                        if (radioButton5.Checked == true)
+                        {
+                            if ((Program.razmer == 100) || (Program.razmer == 50))
+                            {
+
+                                if (Program.razmer == 100)
+                                {
+                                    Program.k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (106 * 1005);
+                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
+                                    textBox8.Text = "Вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
+                                    if (Program.kolichestvo > Program.k)
+                                    {
+                                        Program.new_kolichestvo = Program.kolichestvo - Program.k;
+                                    }
+                                    else { MessageBox.Show("Невозможно осуществить заказ, товаров на складе недостаточно"); return; }
+                                    button6.Enabled = true;
+                                }
+                                if (Program.razmer == 50)
+                                {
+                                    Program.k = ((2 * (a + b) * c) - (dv_k * (dv_a * dv_b)) - (ok_k * (ok_a * ok_b))) / (53 * 1005);
+                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
+                                    textBox8.Text = "Вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
+                                    if (Program.kolichestvo > Program.k)
+                                    {
+                                        Program.new_kolichestvo = Program.kolichestvo - Program.k;
+                                    }
+                                    else { MessageBox.Show("Невозможно осуществить заказ, товаров на складе недостаточно"); return; }
+                                    button6.Enabled = true;
+                                }
+                            }
+                            else { MessageBox.Show("Возможно, вы выбрали не обои"); return; } 
+                    }
+                        
+
+                        if (radioButton6.Checked == true)
+                        {
+                            try
+                            {
+                                if (Program.razmer == 100)
+                                {
+                                    Program.k = (a * b) / (106 * 1005);
+                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
+                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
+                                    if (Program.kolichestvo > Program.k)
+                                    {
+                                        Program.new_kolichestvo = Program.kolichestvo - Program.k;
+                                    }
+                                    else { MessageBox.Show("Невозможно осуществить заказ, товаров на складе недостаточно"); return; }
+                                    button6.Enabled = true;
+                                }
+                                if (Program.razmer == 50)
+                                {
+                                    Program.k = (a * b) / (53 * 1005);
+                                    Program.s = Math.Ceiling(Program.k) * Program.cena;
+                                    textBox8.Text = "вам потребуется " + Math.Ceiling(Program.k) + " рулонов стоимостью " + Math.Ceiling(Program.s) + " рублей";
+                                    if (Program.kolichestvo > Program.k)
+                                    {
+                                        Program.new_kolichestvo = Program.kolichestvo - Program.k;
+                                    }
+                                    else { MessageBox.Show("Невозможно осуществить заказ, товаров на складе недостаточно"); return; }
+                                    button6.Enabled = true;
+                                }
+                            }
+                            catch { MessageBox.Show("Неверный размер , возможно, вы выбрали не обои"); return; }
+
+                        }
+                    }
+                    catch
+                    { MessageBox.Show("Вы ввели не все параметры"); return; }
+                }
+            }
+            catch { MessageBox.Show("Вы ввели не все параметры!"); return; }
+        }//РАССЧИТЫВАЕТСЯ И СОЗДАЁТСЯ НАКЛАДНАЯ 
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Obnovlenie();
+        }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
+            textBox8.Text = "";
             button2.Enabled = false;
+            button4.Enabled = false;
+            button6.Enabled = false;
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
+            textBox8.Text = "";
             button2.Enabled = false;
+            button4.Enabled = false;
+            button6.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -276,8 +275,6 @@ namespace КУРСОВОЙ
                 int id = Program.db4.ADD(Program.id_kl, (int)Math.Ceiling(Program.k), (float)Program.cena, (int)Math.Ceiling(Program.s), DateTime.Now);
                 Program.db3.ADD(Program.id_tov, id);
                 Program.db2.Edit(Program.id_tov, Program.naim, Program.razmer, (float)Program.cena, (float)Math.Floor(Program.new_kolichestvo));
-                                   
-                //число рулонов общее - число рулонов заказанное
                 MessageBox.Show("заказ оплачен покупателем" + Program.FIO);
             }
             catch { MessageBox.Show("выделите строку"); return; } 
@@ -325,7 +322,7 @@ namespace КУРСОВОЙ
                 }
                 return;
             }
-            label15.Text = ("id_клиента" + " | " + "ФИО" + " | " + "Почта");
+            label15.Text = ("id_клиента" + " | " + "                ФИО                " + " | " + "Почта");
             foreach (Клиенты kl in clients)
             {
                 listBox2.Items.Add(kl);
@@ -335,17 +332,42 @@ namespace КУРСОВОЙ
 
         private void button6_Click(object sender, EventArgs e)
         {
-            razd_kl();
+            try
+            {
+                string str = listBox2.SelectedItem.ToString();
+                char razd = '|';
+                string[] words = str.Split(razd);
+                int N = words.Length;
+                List<string> list = new List<string>();
+                int M = 0;
+                for (int i = 0; i < N; i++)
+                {
+                    if ((words[i] != "") && (words[i] != "\n"))
+                    {
+                        list.Add(words[i]);
+                        M++;
+                    }
+                }
+
+                for (int i = 0; i < N; i++)
+                {
+                    Program.id_kl = Convert.ToInt32(list[0]);
+                    Program.FIO = Convert.ToString(list[1]);
+                    Program.mail = Convert.ToString(list[2]);
+                }
+            }
+            catch
+            { MessageBox.Show("Выделите строку"); return; }
             var dialog = new SaveFileDialog();
             dialog.Filter = "Pdf (*.pdf)|*.pdf";
             if (dialog.ShowDialog() != DialogResult.Cancel)
             {
-                Pdf pd = new Pdf();
+                Pdf_nakladnaya pd = new Pdf_nakladnaya();
                 pd.PDF(dialog.FileName);
+                MessageBox.Show("Сохранено");
             }
-            MessageBox.Show("Сохранено");
+            
             button4.Enabled = true;
-            button2.Enabled = true;
         }
 
     }

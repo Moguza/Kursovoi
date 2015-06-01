@@ -14,24 +14,15 @@ using iTextSharp.text.pdf;
 
 namespace КУРСОВОЙ
 {
-    class Pdf
+    class Pdf_nakladnaya
     {
-        
-   //     public string way_dog = @"C:\Users\Ольга\Documents\Visual Studio 2010\Projects\КУРСОВОЙ\КУРСОВОЙ\Отчёт\";
-        public void PDF(string fileName = "Накладная № ")
+        public void PDF(string fileName)
         {
-            var x = Program.db2.Zapros(0);
-            int nomer = 0;
             var doc = new Document();
-            foreach (Товары tov in x)
-            {
-                x.Last();
-                nomer = tov.id_товара;
-            }
-            PdfWriter.GetInstance(doc, new FileStream(fileName.ToString() + "Накладная №" + nomer.ToString() + @".pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(fileName.ToString() + @".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"C:\Users\Ольга\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-            //////////
+
             iTextSharp.text.Phrase j0 = new Phrase("НАКЛАДНАЯ ",
            new iTextSharp.text.Font(baseFont, 20,
            iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
@@ -39,13 +30,25 @@ namespace КУРСОВОЙ
             a0.Alignment = Element.ALIGN_CENTER;
             a0.SpacingAfter = 10;
 
-            iTextSharp.text.Phrase j1 = new Phrase("Вам необходимо оплатить " + Math.Ceiling(Program.k) + " рулонов",
+            iTextSharp.text.Phrase jj = new Phrase(Program.naim,
+           new iTextSharp.text.Font(baseFont, 12,
+           iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph aa = new Paragraph(jj);
+            aa.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j1 = new Phrase("Количество: " + Math.Ceiling(Program.k),
            new iTextSharp.text.Font(baseFont, 12,
            iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
             Paragraph a1 = new Paragraph(j1);
             a1.SpacingAfter = 10;
 
-            iTextSharp.text.Phrase j2 = new Phrase("стоимостью " + Program.s + "рублей",
+            iTextSharp.text.Phrase jj1 = new Phrase("Цена: " +  Math.Ceiling(Program.cena),
+           new iTextSharp.text.Font(baseFont, 12,
+           iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph aa1 = new Paragraph(jj1);
+            aa1.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j2 = new Phrase("ИТОГО К оплате: " + Program.s + " рублей",
            new iTextSharp.text.Font(baseFont, 12,
            iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
             Paragraph a2 = new Paragraph(j2);
@@ -75,14 +78,28 @@ namespace КУРСОВОЙ
             Paragraph a6 = new Paragraph(j6);
             a6.SpacingAfter = 10;
 
+            iTextSharp.text.Phrase j7 = new Phrase("ООО Мир Ремонта ",
+           new iTextSharp.text.Font(baseFont, 12,
+           iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a7 = new Paragraph(j7);
+            a7.Alignment = Element.ALIGN_CENTER;
+            a7.SpacingAfter = 10;
+
+            iTextSharp.text.Image j = iTextSharp.text.Image.GetInstance(@"C:/Users/Ольга/Documents/Visual Studio 2010/Projects/КУРСОВОЙ/1.jpg");
+            j.Alignment = Element.ALIGN_RIGHT;
+
+            doc.Add(j);
             doc.Add(a0);
-            doc.Add(a1);
-            doc.Add(a2);
+            
             doc.Add(a3);
-            doc.Add(a4);
             doc.Add(a5);
+            doc.Add(aa);
+            doc.Add(a1);
+            doc.Add(aa1);
+            doc.Add(a2);
+            doc.Add(a4);
             doc.Add(a6);
-            MessageBox.Show("создан");
+            doc.Add(a7);
             doc.Close();
         }
     }

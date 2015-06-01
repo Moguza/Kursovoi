@@ -110,7 +110,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 207);
+            this.button1.Location = new System.Drawing.Point(15, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 31);
             this.button1.TabIndex = 15;
@@ -128,7 +128,7 @@
             "Список товаров",
             "Список проданных товаров",
             "Заказы"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 170);
+            this.comboBox1.Location = new System.Drawing.Point(15, 144);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 31);
             this.comboBox1.TabIndex = 14;
@@ -149,7 +149,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Bisque;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(9, 134);
+            this.label2.Location = new System.Drawing.Point(12, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(270, 24);
             this.label2.TabIndex = 18;

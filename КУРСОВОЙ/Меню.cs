@@ -31,7 +31,7 @@ namespace КУРСОВОЙ
 
         private void изменитьБДToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            Изменить_БД f1 = new Изменить_БД();
             f1.ShowDialog();
         }
 
@@ -76,9 +76,5 @@ namespace КУРСОВОЙ
                 }
             }
         }
-
-        
-
-
     }
 }
