@@ -27,12 +27,14 @@ namespace КУРСОВОЙ
             Создать_заказ_плитка_на_пол sz_pol = new Создать_заказ_плитка_на_пол();
             sz_pol.ShowDialog();
         }
+       
 
         private void изменитьБДToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
             f1.ShowDialog();
         }
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -66,7 +68,7 @@ namespace КУРСОВОЙ
             }
             if (comboBox1.Text == "Заказы")
             {
-                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи" + " | " + "id_товара");
+                label1.Text = ("id_продажи" + " | " + "id_клиента" + " | " + "Количество" + " | " + "Цена" + " | " + "Общая_Стоимость" + " | " + "Дата_продажи");
                 var c = Program.db4.Zapros(0);
                 foreach (Продажа prod in c)
                 {
@@ -75,6 +77,7 @@ namespace КУРСОВОЙ
             }
         }
 
+        
 
 
     }

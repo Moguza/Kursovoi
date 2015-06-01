@@ -51,16 +51,10 @@ namespace КУРСОВОЙ
             get;
             set;
         }
-        [Column(DbType = "int")]
-        public int id_товара
-        {
-            get;
-            set;
-        }
-
+        
         public override string ToString()
         {
-            return id_продажи + " | " + id_клиента + " | " + Количество + " | " + Цена + " | " + Стоимость + " | " + Дата_продажи + " | " + id_товара;
+            return id_продажи + " | " + id_клиента + " | " + Количество + " | " + Цена + " | " + Стоимость + " | " + Дата_продажи;
         }
     }
     public class DB4 : DataContext
@@ -82,7 +76,7 @@ namespace КУРСОВОЙ
             }
         }
 
-        public int ADD(int id_клиента, int Количество, float Цена, float Стоимость, DateTimeOffset Дата_продажи, int id_товара)
+        public int ADD(int id_клиента, int Количество, float Цена, float Стоимость, DateTimeOffset Дата_продажи)
         {
             Продажа prod = new Продажа();
             prod.id_клиента = id_клиента;
@@ -90,12 +84,11 @@ namespace КУРСОВОЙ
             prod.Цена = Цена;
             prod.Стоимость = Стоимость;
             prod.Дата_продажи = Дата_продажи;
-            prod.id_товара = id_товара;
             this.Продажа.InsertOnSubmit(prod);
             this.SubmitChanges();
             return prod.id_продажи;
         }
-        public void Edit(int id_продажи, int id_клиента, int Количество, float Цена, float Стоимость, DateTimeOffset Дата_продажи, int id_товара)
+        public void Edit(int id_продажи, int id_клиента, int Количество, float Цена, float Стоимость, DateTimeOffset Дата_продажи)
         {
             Продажа prod = this.Продажа.Where(c => c.id_продажи == id_продажи).FirstOrDefault();
             prod.id_клиента = id_клиента;
@@ -103,7 +96,6 @@ namespace КУРСОВОЙ
             prod.Цена = Цена;
             prod.Стоимость = Стоимость;
             prod.Дата_продажи = Дата_продажи;
-            prod.id_товара = id_товара;
             this.SubmitChanges();
         }
         public void Delete(int id_продажи)

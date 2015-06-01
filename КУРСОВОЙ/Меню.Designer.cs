@@ -34,8 +34,6 @@
             this.обоиНаСтеныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.плиткаНаПолToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьБДToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.построитьОтчетToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.отправитьОтчетНаПочтуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьЗаказToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьЗаказToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,21 +74,9 @@
             // изменитьБДToolStripMenuItem
             // 
             this.изменитьБДToolStripMenuItem.Name = "изменитьБДToolStripMenuItem";
-            this.изменитьБДToolStripMenuItem.Size = new System.Drawing.Size(322, 30);
+            this.изменитьБДToolStripMenuItem.Size = new System.Drawing.Size(198, 30);
             this.изменитьБДToolStripMenuItem.Text = "Изменить БД";
             this.изменитьБДToolStripMenuItem.Click += new System.EventHandler(this.изменитьБДToolStripMenuItem_Click_1);
-            // 
-            // построитьОтчетToolStripMenuItem1
-            // 
-            this.построитьОтчетToolStripMenuItem1.Name = "построитьОтчетToolStripMenuItem1";
-            this.построитьОтчетToolStripMenuItem1.Size = new System.Drawing.Size(322, 30);
-            this.построитьОтчетToolStripMenuItem1.Text = "Построить отчет";
-            // 
-            // отправитьОтчетНаПочтуToolStripMenuItem1
-            // 
-            this.отправитьОтчетНаПочтуToolStripMenuItem1.Name = "отправитьОтчетНаПочтуToolStripMenuItem1";
-            this.отправитьОтчетНаПочтуToolStripMenuItem1.Size = new System.Drawing.Size(322, 30);
-            this.отправитьОтчетНаПочтуToolStripMenuItem1.Text = "Отправить отчет на почту";
             // 
             // создатьЗаказToolStripMenuItem1
             // 
@@ -98,16 +84,14 @@
             this.обоиНаСтеныToolStripMenuItem,
             this.плиткаНаПолToolStripMenuItem});
             this.создатьЗаказToolStripMenuItem1.Name = "создатьЗаказToolStripMenuItem1";
-            this.создатьЗаказToolStripMenuItem1.Size = new System.Drawing.Size(322, 30);
+            this.создатьЗаказToolStripMenuItem1.Size = new System.Drawing.Size(198, 30);
             this.создатьЗаказToolStripMenuItem1.Text = "Создать заказ";
             // 
             // создатьЗаказToolStripMenuItem
             // 
             this.создатьЗаказToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.создатьЗаказToolStripMenuItem1,
-            this.изменитьБДToolStripMenuItem,
-            this.построитьОтчетToolStripMenuItem1,
-            this.отправитьОтчетНаПочтуToolStripMenuItem1});
+            this.изменитьБДToolStripMenuItem});
             this.создатьЗаказToolStripMenuItem.Font = new System.Drawing.Font("Segoe Print", 11F);
             this.создатьЗаказToolStripMenuItem.Name = "создатьЗаказToolStripMenuItem";
             this.создатьЗаказToolStripMenuItem.Size = new System.Drawing.Size(69, 30);
@@ -199,8 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem обоиНаСтеныToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem плиткаНаПолToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьБДToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem построитьОтчетToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem отправитьОтчетНаПочтуToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem создатьЗаказToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem создатьЗаказToolStripMenuItem;
         private System.Windows.Forms.Label label1;

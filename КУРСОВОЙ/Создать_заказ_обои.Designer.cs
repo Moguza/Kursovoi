@@ -60,14 +60,24 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -84,7 +94,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(636, 7);
+            this.label6.Location = new System.Drawing.Point(6, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 128;
@@ -288,11 +298,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(597, 372);
+            this.button1.Location = new System.Drawing.Point(1055, 46);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 57);
             this.button1.TabIndex = 125;
-            this.button1.Text = "Далее";
+            this.button1.Text = "Рассчитать";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -332,18 +342,18 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(636, 25);
+            this.listBox1.Location = new System.Drawing.Point(6, 34);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(389, 160);
+            this.listBox1.Size = new System.Drawing.Size(389, 134);
             this.listBox1.TabIndex = 127;
             // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(283, 349);
+            this.textBox8.Location = new System.Drawing.Point(260, 359);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(239, 103);
+            this.textBox8.Size = new System.Drawing.Size(307, 105);
             this.textBox8.TabIndex = 126;
             // 
             // radioButton6
@@ -407,36 +417,26 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(910, 372);
+            this.button2.Location = new System.Drawing.Point(1055, 272);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 57);
             this.button2.TabIndex = 133;
-            this.button2.Text = "Очистить";
+            this.button2.Text = "Обновить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(342, 201);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 57);
-            this.button3.TabIndex = 134;
-            this.button3.Text = "Отчет";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(636, 220);
+            this.listBox2.Location = new System.Drawing.Point(6, 38);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(389, 134);
+            this.listBox2.Size = new System.Drawing.Size(389, 108);
             this.listBox2.TabIndex = 135;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(636, 201);
+            this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 136;
@@ -444,32 +444,126 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(733, 372);
+            this.button4.Location = new System.Drawing.Point(1055, 190);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 57);
+            this.button4.Size = new System.Drawing.Size(115, 57);
             this.button4.TabIndex = 137;
-            this.button4.Text = "Составить заказ";
+            this.button4.Text = "Оплатить заказ!";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(304, 192);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 29);
+            this.button3.TabIndex = 140;
+            this.button3.Text = "поиск";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(9, 192);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(289, 29);
+            this.textBox9.TabIndex = 139;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(6, 176);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.TabIndex = 138;
+            this.label14.Text = "Название";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(304, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 29);
+            this.button5.TabIndex = 143;
+            this.button5.Text = "поиск";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(9, 170);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(289, 29);
+            this.textBox10.TabIndex = 142;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(6, 154);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 13);
+            this.label15.TabIndex = 141;
+            this.label15.Text = "Название";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(642, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(407, 231);
+            this.groupBox2.TabIndex = 144;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "КЛИЕНТЫ";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.groupBox6.Controls.Add(this.listBox2);
+            this.groupBox6.Controls.Add(this.label1);
+            this.groupBox6.Controls.Add(this.button5);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.textBox10);
+            this.groupBox6.Location = new System.Drawing.Point(642, 254);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(407, 210);
+            this.groupBox6.TabIndex = 145;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "ТОВАРЫ";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1056, 117);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(114, 49);
+            this.button6.TabIndex = 146;
+            this.button6.Text = "Создать накладную";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Создать_заказ_обои
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1030, 464);
+            this.ClientSize = new System.Drawing.Size(1195, 476);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox8);
             this.Name = "Создать_заказ_обои";
             this.Text = "Создать_заказ_обои";
@@ -482,6 +576,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,10 +618,18 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button6;
 
     }
 }

@@ -41,7 +41,7 @@ namespace КУРСОВОЙ
             set;
         }
         [Column(DbType = "int")]
-        public int Количество
+        public float Количество
         {
             get;
             set;
@@ -68,7 +68,7 @@ namespace КУРСОВОЙ
                 this.CreateDatabase();
             }
         }
-        public void ADD(string Наименование, float Размер, float Цена, int Количество)
+        public void ADD(string Наименование, float Размер, float Цена, float Количество)
         {
             Товары tov = new Товары();
             tov.Наименование = Наименование;
@@ -78,7 +78,7 @@ namespace КУРСОВОЙ
             this.Товар.InsertOnSubmit(tov);
             this.SubmitChanges();
         }
-        public void Edit(int id_товара, string Наименование, float Размер, float Цена, int Количество)
+        public void Edit(int id_товара, string Наименование, float Размер, float Цена, float Количество)
         {
             Товары tov = this.Товар.Where(c => c.id_товара == id_товара).FirstOrDefault();
             tov.Наименование = Наименование;
