@@ -14,7 +14,7 @@ using iTextSharp.text.pdf;
 
 namespace КУРСОВОЙ
 {
-    class Pdf_nakladnaya
+    class Pdf_schet
     {
         public void PDF(string fileName)
         {
@@ -23,12 +23,12 @@ namespace КУРСОВОЙ
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"C:\Users\Ольга\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
-            iTextSharp.text.Phrase j0 = new Phrase("НАКЛАДНАЯ ",
+            iTextSharp.text.Phrase j0 = new Phrase("СЧЁТ НА ОПЛАТУ ",
            new iTextSharp.text.Font(baseFont, 20,
            iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
             Paragraph a0 = new Paragraph(j0);
             a0.Alignment = Element.ALIGN_CENTER;
-            a0.SpacingAfter = 10;
+            a0.SpacingAfter = 20;
 
             iTextSharp.text.Phrase jj = new Phrase(Program.naim,
            new iTextSharp.text.Font(baseFont, 12,
@@ -76,7 +76,7 @@ namespace КУРСОВОЙ
           new iTextSharp.text.Font(baseFont, 12,
           iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
             Paragraph a6 = new Paragraph(j6);
-            a6.SpacingAfter = 10;
+            a6.SpacingAfter = 210;
 
             iTextSharp.text.Phrase j7 = new Phrase("ООО Мир Ремонта ",
            new iTextSharp.text.Font(baseFont, 12,

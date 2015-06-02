@@ -99,7 +99,7 @@ namespace КУРСОВОЙ
             dialog.Filter = "Pdf (*.pdf)|*.pdf";
             if (dialog.ShowDialog() != DialogResult.Cancel)
             {
-                Pdf_nakladnaya pd = new Pdf_nakladnaya();
+                Pdf_schet pd = new Pdf_schet();
                 pd.PDF(dialog.FileName);
                 MessageBox.Show("Сохранено");
             button4.Enabled = true;

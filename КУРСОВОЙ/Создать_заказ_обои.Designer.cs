@@ -83,11 +83,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label13.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(23, 16);
+            this.label13.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label13.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(6, 20);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(179, 21);
+            this.label13.Size = new System.Drawing.Size(208, 24);
             this.label13.TabIndex = 94;
             this.label13.Text = "выберите количество окон";
             // 
@@ -104,11 +104,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label12.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(23, 104);
+            this.label12.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label12.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(6, 108);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 21);
+            this.label12.Size = new System.Drawing.Size(86, 24);
             this.label12.TabIndex = 90;
             this.label12.Text = "Длина, см";
             // 
@@ -140,7 +140,7 @@
             "2",
             "3",
             "4"});
-            this.comboBox2.Location = new System.Drawing.Point(23, 39);
+            this.comboBox2.Location = new System.Drawing.Point(42, 43);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 27);
             this.comboBox2.TabIndex = 95;
@@ -148,7 +148,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(110, 104);
+            this.textBox6.Location = new System.Drawing.Point(110, 108);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(53, 28);
             this.textBox6.TabIndex = 93;
@@ -167,11 +167,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label10.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(20, 78);
+            this.label10.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label10.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(20, 82);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 21);
+            this.label10.Size = new System.Drawing.Size(164, 24);
             this.label10.TabIndex = 89;
             this.label10.Text = "введите размер окон";
             // 
@@ -189,11 +189,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label11.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(10, 142);
+            this.label11.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label11.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(4, 146);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 21);
+            this.label11.Size = new System.Drawing.Size(100, 24);
             this.label11.TabIndex = 91;
             this.label11.Text = "Ширина, см";
             // 
@@ -215,43 +215,44 @@
             this.groupBox4.Controls.Add(this.textBox5);
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.Location = new System.Drawing.Point(6, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(227, 191);
+            this.groupBox4.Size = new System.Drawing.Size(227, 200);
             this.groupBox4.TabIndex = 130;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Двери";
+            this.groupBox4.Text = "ДВЕРИ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(31, 18);
+            this.label5.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(6, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 21);
+            this.label5.Size = new System.Drawing.Size(222, 24);
             this.label5.TabIndex = 82;
             this.label5.Text = "выберите количество дверей";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label8.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(10, 113);
+            this.label8.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(13, 119);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 21);
+            this.label8.Size = new System.Drawing.Size(86, 24);
             this.label8.TabIndex = 83;
             this.label8.Text = "Длина, см";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label7.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(10, 148);
+            this.label7.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label7.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(13, 154);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 21);
+            this.label7.Size = new System.Drawing.Size(100, 24);
             this.label7.TabIndex = 84;
             this.label7.Text = "Ширина, см";
             // 
@@ -264,7 +265,7 @@
             "2",
             "3",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(31, 41);
+            this.comboBox1.Location = new System.Drawing.Point(42, 50);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 85;
@@ -272,7 +273,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(110, 145);
+            this.textBox5.Location = new System.Drawing.Point(129, 154);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(53, 28);
             this.textBox5.TabIndex = 86;
@@ -280,7 +281,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(110, 110);
+            this.textBox4.Location = new System.Drawing.Point(129, 119);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(53, 28);
             this.textBox4.TabIndex = 87;
@@ -288,18 +289,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.DarkKhaki;
-            this.label9.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(30, 83);
+            this.label9.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(28, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 21);
+            this.label9.Size = new System.Drawing.Size(178, 24);
             this.label9.TabIndex = 88;
             this.label9.Text = "введите размер дверей";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1055, 46);
+            this.button1.Location = new System.Drawing.Point(977, 79);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 57);
             this.button1.TabIndex = 125;
@@ -325,17 +326,18 @@
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.textBox7);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox5.Location = new System.Drawing.Point(6, 249);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(221, 203);
+            this.groupBox5.Size = new System.Drawing.Size(221, 204);
             this.groupBox5.TabIndex = 131;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Окна";
+            this.groupBox5.Text = "ОКНА";
             // 
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(110, 142);
+            this.textBox7.Location = new System.Drawing.Point(110, 146);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(53, 28);
             this.textBox7.TabIndex = 92;
@@ -347,22 +349,22 @@
             this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(6, 41);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(389, 123);
+            this.listBox1.Size = new System.Drawing.Size(416, 123);
             this.listBox1.TabIndex = 127;
             // 
             // textBox8
             // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(280, 424);
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(249, 373);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(307, 40);
+            this.textBox8.Size = new System.Drawing.Size(238, 80);
             this.textBox8.TabIndex = 126;
             // 
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.radioButton6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton6.Location = new System.Drawing.Point(6, 50);
             this.radioButton6.Name = "radioButton6";
@@ -376,7 +378,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radioButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.radioButton5.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton5.Location = new System.Drawing.Point(6, 27);
             this.radioButton5.Name = "radioButton5";
@@ -389,11 +391,11 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Controls.Add(this.radioButton6);
             this.groupBox3.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(488, 12);
+            this.groupBox3.Location = new System.Drawing.Point(310, 161);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(142, 80);
             this.groupBox3.TabIndex = 98;
@@ -410,7 +412,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(239, 11);
+            this.groupBox1.Location = new System.Drawing.Point(270, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(217, 135);
             this.groupBox1.TabIndex = 132;
@@ -420,7 +422,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(1055, 272);
+            this.button2.Location = new System.Drawing.Point(977, 305);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 57);
             this.button2.TabIndex = 133;
@@ -435,7 +437,7 @@
             this.listBox2.ItemHeight = 17;
             this.listBox2.Location = new System.Drawing.Point(6, 38);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(389, 106);
+            this.listBox2.Size = new System.Drawing.Size(416, 106);
             this.listBox2.TabIndex = 135;
             // 
             // label1
@@ -451,7 +453,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(1055, 190);
+            this.button4.Location = new System.Drawing.Point(977, 223);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 57);
             this.button4.TabIndex = 137;
@@ -530,9 +532,9 @@
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(642, 12);
+            this.groupBox2.Location = new System.Drawing.Point(517, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(407, 231);
+            this.groupBox2.Size = new System.Drawing.Size(439, 231);
             this.groupBox2.TabIndex = 144;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ТОВАРЫ";
@@ -546,9 +548,9 @@
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.textBox10);
             this.groupBox6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox6.Location = new System.Drawing.Point(642, 254);
+            this.groupBox6.Location = new System.Drawing.Point(517, 251);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(407, 210);
+            this.groupBox6.Size = new System.Drawing.Size(439, 210);
             this.groupBox6.TabIndex = 145;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "КЛИЕНТЫ";
@@ -556,7 +558,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Segoe Print", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(1056, 117);
+            this.button6.Location = new System.Drawing.Point(978, 150);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(114, 54);
             this.button6.TabIndex = 146;
@@ -569,7 +571,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1195, 476);
+            this.ClientSize = new System.Drawing.Size(1102, 476);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
